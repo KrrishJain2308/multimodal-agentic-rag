@@ -20,20 +20,25 @@ with st.sidebar:
     
     # Document Upload
     st.subheader("1. Ingest Data")
-    uploaded_file = st.file_uploader("Upload a PDF document", type=["pdf"])
+    uploaded_files = st.file_uploader(
+        "Upload documents", 
+        type=["pdf", "csv", "docx", "pptx", "xlsx"],
+        accept_multiple_files=True
+    )
     
-    if st.button("Process Document", use_container_width=True):
-        if uploaded_file is not None:
-            temp_path = os.path.join("data", uploaded_file.name)
-            os.makedirs("data", exist_ok=True)
-            with open(temp_path, "wb") as f:
-                f.write(uploaded_file.getbuffer())
-            
-            with st.spinner("Ingesting document into ChromaDB..."):
-                ingest_document(temp_path)
-            st.success(f"Successfully ingested: {uploaded_file.name}")
+    if st.button("Process Documents", use_container_width=True):
+        if uploaded_files:
+            for uploaded_file in uploaded_files:
+                temp_path = os.path.join("data", uploaded_file.name)
+                os.makedirs("data", exist_ok=True)
+                with open(temp_path, "wb") as f:
+                    f.write(uploaded_file.getbuffer())
+                
+                with st.spinner(f"Ingesting {uploaded_file.name}..."):
+                    ingest_document(temp_path)
+                st.success(f"Successfully ingested: {uploaded_file.name}")
         else:
-            st.error("Please upload a file first.")
+            st.error("Please upload at least one file first.")
             
     st.divider()
     

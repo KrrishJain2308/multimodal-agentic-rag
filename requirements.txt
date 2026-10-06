@@ -9,3 +9,6 @@ pillow
 streamlit
 python-dotenv
 jupyter
+openpyxl
+python-docx
+python-pptx

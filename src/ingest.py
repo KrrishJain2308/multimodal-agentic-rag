@@ -1,6 +1,12 @@
 import os
 from typing import List
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import (
+    PyPDFLoader,
+    CSVLoader,
+    UnstructuredWordDocumentLoader,
+    UnstructuredPowerPointLoader,
+    UnstructuredExcelLoader
+)
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -22,9 +28,24 @@ def initialize_vector_store() -> Chroma:
     return vectorstore
 
 def ingest_document(file_path: str):
-    """Ingest a PDF document, split it, and add to Vector Store."""
+    """Ingest a document based on its extension, split it, and add to Vector Store."""
     print(f"Loading document: {file_path}")
-    loader = PyPDFLoader(file_path)
+    
+    ext = os.path.splitext(file_path)[1].lower()
+    
+    if ext == '.pdf':
+        loader = PyPDFLoader(file_path)
+    elif ext == '.csv':
+        loader = CSVLoader(file_path)
+    elif ext == '.docx':
+        loader = UnstructuredWordDocumentLoader(file_path)
+    elif ext == '.pptx':
+        loader = UnstructuredPowerPointLoader(file_path)
+    elif ext == '.xlsx':
+        loader = UnstructuredExcelLoader(file_path)
+    else:
+        raise ValueError(f"Unsupported file format: {ext}")
+        
     docs = loader.load()
     
     print("Splitting text into chunks...")
