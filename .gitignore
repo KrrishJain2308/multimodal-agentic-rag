@@ -1,0 +1,10 @@
+.DS_Store
+.env
+venv/
+__pycache__/
+*.docx
+*.pptx
+*.key
+*.pages
+data/
+*.pdf

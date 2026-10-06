@@ -1,0 +1,11 @@
+langchain
+langchain-core
+langchain-community
+langchain-google-genai
+chromadb
+pypdf
+unstructured
+pillow
+streamlit
+python-dotenv
+jupyter
