@@ -55,9 +55,16 @@ def ingest_document(file_path: str):
     )
     splits = text_splitter.split_documents(docs)
     
-    print(f"Adding {len(splits)} chunks to Vector Store...")
+    print(f"Adding {len(splits)} chunks to Vector Store in batches...")
     vectorstore = initialize_vector_store()
-    vectorstore.add_documents(documents=splits)
+    
+    # Chroma DB has a hard limit on batch sizes (usually 5461). We process in safe batches of 4000.
+    BATCH_SIZE = 4000
+    for i in range(0, len(splits), BATCH_SIZE):
+        batch = splits[i:i + BATCH_SIZE]
+        vectorstore.add_documents(documents=batch)
+        print(f"Added batch {i//BATCH_SIZE + 1} ({len(batch)} chunks)")
+        
     print("Ingestion complete.")
 
 def clear_database():
