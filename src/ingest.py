@@ -14,7 +14,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-VECTOR_STORE_DIR = "./data/chroma_db"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+VECTOR_STORE_DIR = os.path.join(BASE_DIR, "data", "chroma_db")
 
 def initialize_vector_store() -> Chroma:
     """Initialize the ChromaDB vector store with HuggingFace embeddings."""

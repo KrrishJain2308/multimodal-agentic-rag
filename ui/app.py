@@ -60,9 +60,13 @@ with st.sidebar:
 if "messages" not in st.session_state:
     st.session_state.messages = []
     
+@st.cache_resource
+def load_agent():
+    return get_agent()
+    
 if "agent" not in st.session_state:
     try:
-        st.session_state.agent = get_agent()
+        st.session_state.agent = load_agent()
     except Exception as e:
         st.session_state.agent = None
         st.error(f"Failed to initialize Agent: {str(e)}")
