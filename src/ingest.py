@@ -8,7 +8,7 @@ from langchain_community.document_loaders import (
     UnstructuredExcelLoader
 )
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from dotenv import load_dotenv
 
@@ -17,8 +17,8 @@ load_dotenv()
 VECTOR_STORE_DIR = "./data/chroma_db"
 
 def initialize_vector_store() -> Chroma:
-    """Initialize the ChromaDB vector store with Google embeddings."""
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-2")
+    """Initialize the ChromaDB vector store with HuggingFace embeddings."""
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     
     vectorstore = Chroma(
         collection_name="multimodal_rag",

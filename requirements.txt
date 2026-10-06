@@ -12,3 +12,5 @@ jupyter
 openpyxl
 python-docx
 python-pptx
+sentence-transformers
+langchain-huggingface
