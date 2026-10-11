@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1165.5619999999997 1225.45" width="1165.5619999999997" height="1225.45" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="seq-arrow" markerWidth="8" markerHeight="5" refX="8" refY="2.5" orient="auto-start-reverse">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" />
+  </marker>
+  <marker id="seq-arrow-open" markerWidth="8" markerHeight="5" refX="8" refY="2.5" orient="auto-start-reverse">
+    <polyline points="0 0, 8 2.5, 0 5" fill="none" stroke="var(--_arrow)" stroke-width="1" />
+  </marker>
+</defs>
+<g class="block" data-type="rect" data-label="rgb(25, 30, 45)">
+  <rect x="36.81099999999997" y="100.44999999999999" width="682.6089999999999" height="540" rx="0" ry="0" fill="none" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="36.81099999999997" y="100.44999999999999" width="121.27000000000002" height="18" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="42.81099999999997" y="109.44999999999999" font-size="11" font-weight="600" fill="var(--_text-sec)" dy="3.8499999999999996">rect [rgb(25, 30, 45)]</text>
+</g>
+<g class="block" data-type="alt" data-label="Document-specific query">
+  <rect x="584.7009999999998" y="811.45" width="550.8609999999999" height="284" rx="0" ry="0" fill="none" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="584.7009999999998" y="811.45" width="167.47000000000003" height="18" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="590.7009999999998" y="820.45" font-size="11" font-weight="600" fill="var(--_text-sec)" dy="3.8499999999999996">alt [Document-specific query]</text>
+  <line x1="584.7009999999998" y1="1047.45" x2="1135.5619999999997" y2="1047.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+  <text x="592.7009999999998" y="1061.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">[General greeting / conversational query]</text>
+</g>
+<g class="block" data-type="rect" data-label="rgb(35, 25, 45)">
+  <rect x="36.81099999999997" y="663.45" width="1098.7509999999997" height="512" rx="0" ry="0" fill="none" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="36.81099999999997" y="663.45" width="121.27000000000002" height="18" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="42.81099999999997" y="672.45" font-size="11" font-weight="600" fill="var(--_text-sec)" dy="3.8499999999999996">rect [rgb(35, 25, 45)]</text>
+</g>
+<line class="lifeline" data-actor="User" x1="87.12749999999997" y1="92.45" x2="87.12749999999997" y2="1195.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="UI" x1="253.70249999999996" y1="70" x2="253.70249999999996" y2="1195.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Ingest" x1="467.33099999999996" y1="70" x2="467.33099999999996" y2="1195.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Chroma" x1="652.0604999999998" y1="70" x2="652.0604999999998" y2="1195.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Agent" x1="857.1674999999998" y1="70" x2="857.1674999999998" y2="1195.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="LLM" x1="1065.2384999999997" y1="70" x2="1065.2384999999997" y2="1195.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<g class="message" data-from="User" data-to="UI" data-label="Uploads file(s) (PDF, DOCX, CSV, etc.) &amp; clicks &quot;Process&quot;" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="87.12749999999997" y1="140.45" x2="253.70249999999996" y2="140.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="170.41499999999996" y="130.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Uploads file(s) (PDF, DOCX, CSV, etc.) &amp; clicks &quot;Process&quot;</text>
+</g>
+<g class="message" data-from="UI" data-to="UI" data-label="Validates file format &amp; size (&lt;= 200MB)" data-line-style="solid" data-arrow-head="filled" data-self="true">
+  <polyline points="253.70249999999996,180.45 283.7025,180.45 283.7025,200.45 253.70249999999996,200.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="291.7025" y="190.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Validates file format &amp; size (&lt;= 200MB)</text>
+</g>
+<g class="message" data-from="UI" data-to="Ingest" data-label="ingest_document(file_path)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="253.70249999999996" y1="250.45" x2="467.33099999999996" y2="250.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="360.51674999999994" y="240.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">ingest_document(file_path)</text>
+</g>
+<g class="message" data-from="Ingest" data-to="Ingest" data-label="Extract text (PyPDFLoader / Unstructured)" data-line-style="solid" data-arrow-head="filled" data-self="true">
+  <polyline points="467.33099999999996,290.45 497.33099999999996,290.45 497.33099999999996,310.45 467.33099999999996,310.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="505.33099999999996" y="300.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Extract text (PyPDFLoader / Unstructured)</text>
+</g>
+<g class="message" data-from="Ingest" data-to="Ingest" data-label="Split text into chunks (1000 chars, 200 overlap)" data-line-style="solid" data-arrow-head="filled" data-self="true">
+  <polyline points="467.33099999999996,360.45 497.33099999999996,360.45 497.33099999999996,380.45 467.33099999999996,380.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="505.33099999999996" y="370.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Split text into chunks (1000 chars, 200 overlap)</text>
+</g>
+<g class="message" data-from="Ingest" data-to="Ingest" data-label="Generate dense embeddings (all-MiniLM-L6-v2)" data-line-style="solid" data-arrow-head="filled" data-self="true">
+  <polyline points="467.33099999999996,430.45 497.33099999999996,430.45 497.33099999999996,450.45 467.33099999999996,450.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="505.33099999999996" y="440.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Generate dense embeddings (all-MiniLM-L6-v2)</text>
+</g>
+<g class="message" data-from="Ingest" data-to="Chroma" data-label="Store chunks &amp; vector embeddings (batches of 4000)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="467.33099999999996" y1="500.45" x2="652.0604999999998" y2="500.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="559.6957499999999" y="490.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Store chunks &amp; vector embeddings (batches of 4000)</text>
+</g>
+<g class="message" data-from="Chroma" data-to="Ingest" data-label="Acknowledgment (Persisted)" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="652.0604999999998" y1="540.45" x2="467.33099999999996" y2="540.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="559.6957499999999" y="530.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Acknowledgment (Persisted)</text>
+</g>
+<g class="message" data-from="Ingest" data-to="UI" data-label="Ingestion complete" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="467.33099999999996" y1="580.45" x2="253.70249999999996" y2="580.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="360.51674999999994" y="570.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Ingestion complete</text>
+</g>
+<g class="message" data-from="UI" data-to="User" data-label="Show progress bar &amp; updated document count" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="253.70249999999996" y1="620.45" x2="87.12749999999997" y2="620.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="170.41499999999996" y="610.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Show progress bar &amp; updated document count</text>
+</g>
+<g class="message" data-from="User" data-to="UI" data-label="Submits query (&quot;What are the main findings in the document?&quot;)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="87.12749999999997" y1="703.45" x2="253.70249999999996" y2="703.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="170.41499999999996" y="693.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Submits query (&quot;What are the main findings in the document?&quot;)</text>
+</g>
+<g class="message" data-from="UI" data-to="Agent" data-label="agent.invoke({&quot;messages&quot;: [...]})" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="253.70249999999996" y1="743.45" x2="857.1674999999998" y2="743.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="555.4349999999998" y="733.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">agent.invoke({&quot;messages&quot;: [...]})</text>
+</g>
+<g class="message" data-from="Agent" data-to="LLM" data-label="Evaluate query against system prompt" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="857.1674999999998" y1="783.45" x2="1065.2384999999997" y2="783.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="961.2029999999997" y="773.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Evaluate query against system prompt</text>
+</g>
+<g class="message" data-from="LLM" data-to="Agent" data-label="Action: Call tool `document_search(query)`" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="1065.2384999999997" y1="851.45" x2="857.1674999999998" y2="851.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="961.2029999999997" y="841.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Action: Call tool `document_search(query)`</text>
+</g>
+<g class="message" data-from="Agent" data-to="Chroma" data-label="Similarity search (k=3 nearest vectors)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="857.1674999999998" y1="891.45" x2="652.0604999999998" y2="891.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="754.6139999999998" y="881.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Similarity search (k=3 nearest vectors)</text>
+</g>
+<g class="message" data-from="Chroma" data-to="Agent" data-label="Returns top 3 relevant chunks + metadata" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="652.0604999999998" y1="931.45" x2="857.1674999999998" y2="931.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="754.6139999999998" y="921.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Returns top 3 relevant chunks + metadata</text>
+</g>
+<g class="message" data-from="Agent" data-to="LLM" data-label="Send retrieved chunks as tool context" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="857.1674999999998" y1="971.45" x2="1065.2384999999997" y2="971.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="961.2029999999997" y="961.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Send retrieved chunks as tool context</text>
+</g>
+<g class="message" data-from="LLM" data-to="Agent" data-label="Synthesizes final answer with citations" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="1065.2384999999997" y1="1011.45" x2="857.1674999999998" y2="1011.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="961.2029999999997" y="1001.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Synthesizes final answer with citations</text>
+</g>
+<g class="message" data-from="LLM" data-to="Agent" data-label="Direct answer (No tool needed)" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="1065.2384999999997" y1="1075.45" x2="857.1674999999998" y2="1075.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="961.2029999999997" y="1065.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Direct answer (No tool needed)</text>
+</g>
+<g class="message" data-from="Agent" data-to="UI" data-label="Return final response + intermediate tool messages" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="857.1674999999998" y1="1115.45" x2="253.70249999999996" y2="1115.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="555.4349999999998" y="1105.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Return final response + intermediate tool messages</text>
+</g>
+<g class="message" data-from="UI" data-to="User" data-label="Stream response &amp; display expandable &quot;📚 Sources&quot;" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="253.70249999999996" y1="1155.45" x2="87.12749999999997" y2="1155.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="170.41499999999996" y="1145.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Stream response &amp; display expandable &quot;📚 Sources&quot;</text>
+</g>
+<g class="note" data-position="over" data-actors="User,LLM">
+  <polygon points="462.67499999999984,628.45 683.6909999999998,628.45 689.6909999999998,634.45 689.6909999999998,651.45 462.67499999999984,651.45" fill="var(--bg)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <polygon points="683.6909999999998,628.45 689.6909999999998,634.45 683.6909999999998,634.45" fill="var(--_inner-stroke)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="576.1829999999998" y="639.95" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Phase B: Question Answering (ReAct Loop)</text>
+</g>
+<g class="actor" data-id="User" data-label="👤 User" data-type="actor">
+  <g transform="translate(69.12749999999997,32) scale(1.5)">
+    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="none" stroke="var(--_line)" stroke-width="0.6666666666666666" />
+    <path d="M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z" fill="none" stroke="var(--_line)" stroke-width="0.6666666666666666" />
+    <path d="M5.62842 18.3563C7.08963 17.0398 9.39997 16 12 16C14.6 16 16.9104 17.0398 18.3716 18.3563" fill="none" stroke="var(--_line)" stroke-width="0.6666666666666666" />
+  </g>
+  <text x="87.12749999999997" y="84" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">👤 User</text>
+</g>
+<g class="actor" data-id="UI" data-label="🖥️ Streamlit UI (app.py)" data-type="participant">
+  <rect x="167.44399999999996" y="30" width="172.517" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="253.70249999999996" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🖥️ Streamlit UI (app.py)</text>
+</g>
+<g class="actor" data-id="Ingest" data-label="⚙️ Ingestion (ingest.py)" data-type="participant">
+  <rect x="379.96099999999996" y="30" width="174.73999999999998" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="467.33099999999996" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">⚙️ Ingestion (ingest.py)</text>
+</g>
+<g class="actor" data-id="Chroma" data-label="💾 ChromaDB" data-type="participant">
+  <rect x="594.7009999999998" y="30" width="114.719" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="652.0604999999998" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">💾 ChromaDB</text>
+</g>
+<g class="actor" data-id="Agent" data-label="🤖 LangGraph Agent (agent.py)" data-type="participant">
+  <rect x="749.4199999999998" y="30" width="215.49499999999995" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="857.1674999999998" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🤖 LangGraph Agent (agent.py)</text>
+</g>
+<g class="actor" data-id="LLM" data-label="🧠 Gemini LLM" data-type="participant">
+  <rect x="1004.9149999999997" y="30" width="120.64699999999999" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="1065.2384999999997" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🧠 Gemini LLM</text>
+</g>
+</svg>

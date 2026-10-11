@@ -1,18 +1,27 @@
-import os
+import logging
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.prebuilt import create_react_agent
 from langchain_core.tools.retriever import create_retriever_tool
-from dotenv import load_dotenv
 
+from src.config import (
+    LLM_MODEL,
+    LLM_TEMPERATURE,
+    RETRIEVER_K
+)
 from src.ingest import initialize_vector_store
 
-load_dotenv()
+logger = logging.getLogger(__name__)
+if not logger.handlers:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
+
 
 def get_agent():
     """Build and return the Multimodal RAG Agent."""
+    logger.info(f"Initializing Multimodal RAG Agent (LLM: {LLM_MODEL}, temperature: {LLM_TEMPERATURE})...")
+    
     # 1. Initialize Vector Store Retriever
     vectorstore = initialize_vector_store()
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+    retriever = vectorstore.as_retriever(search_kwargs={"k": RETRIEVER_K})
     
     # 2. Create the Retriever Tool
     retriever_tool = create_retriever_tool(
@@ -22,10 +31,10 @@ def get_agent():
     )
     tools = [retriever_tool]
     
-    # Using gemini-3.5-flash-lite as requested by the API for the latest features
+    # 3. Initialize LLM from centralized config
     llm = ChatGoogleGenerativeAI(
-        model="gemini-3.5-flash-lite",
-        temperature=0.2,
+        model=LLM_MODEL,
+        temperature=LLM_TEMPERATURE,
     )
     
     # 4. Create the Agent using LangGraph
@@ -38,11 +47,11 @@ def get_agent():
     )
     
     agent = create_react_agent(llm, tools=tools, prompt=system_prompt)
+    logger.info("Agent successfully created with LangGraph ReAct architecture.")
     
     return agent
 
+
 if __name__ == "__main__":
-    # Test the agent
     agent = get_agent()
-    # response = agent.invoke({"input": "What is the summary of the project?"})
-    # print(response["output"])
+    logger.info("Agent test instance initialized successfully.")
